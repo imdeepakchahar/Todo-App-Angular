@@ -15,7 +15,7 @@ ng serve
 ```
 Navigate to `http://localhost:4200/` in your browser. The app will automatically reload if you make any changes to the source files.
 
-## Build
+## Build Project
 
 To build the project, use the command:
 
@@ -24,7 +24,7 @@ ng build
 ```
 The build artifacts will be stored in the `dist/` directory.
 
-## Running Tests
+## Running Unit Tests
 
 To run the test cases, use the following command:
 
