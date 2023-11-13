@@ -1,0 +1,28 @@
+<div class="main bg-light">
+    <div class="container-fluid"> 
+        <button type="button" class="btn btn-primary btn-round position-fixed bottom-0 end-0 m-5" (click)="addTaskAction()">
+        + Add Task
+        </button>
+
+        <div class="row pt-3 pb-3">
+            <div class="col-md-6 offset-md-3">
+                <div *ngFor="let task of taskList" class="card mb-2" [ngClass]="{ 'task-done': task.completed }">
+                <app-todo-item [task]="task" (edit)="editTask($event)" (done)="markAsDone($event)"></app-todo-item>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+  <ng-template #taskModal let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Add Task</h4>
+      <button type="button"  class="btn-close" aria-label="Close" (click)="modal.dismiss()" aria-label="Close">
+      </button>
+    </div>
+    <div class="modal-body">
+      <app-todo-form [formDataValue]="formDataValue" (add)="addTask($event)"></app-todo-form>
+    </div>
+  </ng-template>
+  

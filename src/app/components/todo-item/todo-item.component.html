@@ -1,0 +1,11 @@
+<div class="d-flex align-items-center justify-content-between border p-2">
+    <span class="flex-grow-1">{{ task.title }}</span>
+    <div *ngIf="task.completed">
+        <button class="btn btn-sm btn-outline-dark me-2">Completed</button>
+    </div>
+    <div *ngIf="!task.completed">
+        <button (click)="onEdit()" class="btn btn-sm btn-outline-primary me-2">Edit</button>
+        <a [routerLink]="['task', task.id]" class="btn btn-sm btn-outline-success me-2">View</a>
+        <button (click)="onMarkAsDone()" class="btn btn-sm btn-outline-success">Mark as Done</button>
+    </div>
+</div>

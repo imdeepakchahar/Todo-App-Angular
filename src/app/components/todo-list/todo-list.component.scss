@@ -1,0 +1,9 @@
+.main{
+    height: 100vh; 
+    overflow-y: auto;
+}
+.task-done { 
+    background-color: #f7f7f7;
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
