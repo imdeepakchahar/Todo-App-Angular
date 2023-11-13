@@ -132,3 +132,5 @@ dist
 #angular
 .angular
 .cache
+
+.vscode
